@@ -11,7 +11,7 @@ import java.util.function.Function;
 public class SortUtil {
 
     public static int[] get() {
-        return new int[]{1, 3, 4, 2, 7, 6, 9, 5, 8, 0, 11};
+        return new int[]{1, 3, 4, 2, 7, 6, 9, 5, 8, 0, 10};
     }
 
     public static void swap(int[] ins, int i, int j) {

@@ -41,10 +41,16 @@ public class QuickSort {
                 h--;
             }
             SortUtil.swap(ins, l, h);
+            // if (l < h) {
+            //     SortUtil.swap(ins, l, h);
+            // }
             while (l < h && ins[l] <= pivot) {
                 l++;
             }
             SortUtil.swap(ins, l, h);
+            // if (l < h) {
+            //     SortUtil.swap(ins, l, h);
+            // }
         }
 
         return l;
@@ -65,30 +71,30 @@ public class QuickSort {
             }
         }
         else {
-            DirectInsertSort.directInsertSort(ins);
+            DirectInsertSort.insertSort(ins, l, h);
         }
     }
 
     public static int partitionOptimize(int[] ins, int l, int h) {
-        int pivot = getPivot(ins, l, h); // 1. 优化枢轴
+        int pivotV = getPivotV(ins, l, h); // 1. 优化枢轴
 
         while (l < h) {
-            while (l < h && ins[h] >= pivot) {
+            while (l < h && ins[h] >= pivotV) {
                 h--;
             }
             ins[l] = ins[h]; // 2. 减少pivot的交换操作
-            while (l < h && ins[l] <= pivot) {
+            while (l < h && ins[l] <= pivotV) {
                 l++;
             }
             ins[h] = ins[l];
         }
-        ins[l] = pivot; // 设置中部位置的值
+        ins[l] = pivotV; // 设置中部位置的值
 
         return l;
     }
 
     // 优化枢轴 - 三数取中
-    public static int getPivot(int[] ins, int l, int h) {
+    public static int getPivotV(int[] ins, int l, int h) {
         // int m =  (h + l) / 2;
         int m = l + (h - l) / 2;
 

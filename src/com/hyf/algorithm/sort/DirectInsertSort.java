@@ -15,9 +15,15 @@ public class DirectInsertSort {
     }
 
     public static void directInsertSort(int[] ins) {
+        insertSort(ins, 0, ins.length - 1);
+    }
 
-        for (int i = 1; i < ins.length; i++) {
-            int tmp = ins[i];
+    public static void insertSort(int[] ins, int s, int e) {
+
+        for (int i = s + 1; i <= e; i++) {
+            int k = i;
+            int temp = ins[k];
+
 
             // for (int j = i - 1; j >= 0; j--) {
             //     if (tmp < ins[j]) {
@@ -29,11 +35,12 @@ public class DirectInsertSort {
             //     }
             // }
 
-            int j = i - 1;
-            for (; j >= 0 && tmp < ins[j] /* 省内部的break */; j--) {
-                SortUtil.swap(ins, j, j + 1);
+
+            for (; k > s && temp < ins[k - 1] /* 省内部的break */; k--) {
+                ins[k] = ins[k - 1];
             }
-            ins[j + 1] = tmp;
+            ins[k] = temp;
         }
+
     }
 }

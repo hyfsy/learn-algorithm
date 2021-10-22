@@ -39,10 +39,10 @@ public class HeapSort {
      */
     public static void heapAdjust(int[] ins, int i, int m) {
         int tmp = ins[i];
-        int j;
+        int j = i;
 
         // 2i + 1 表示当前节点的左子节点的坐标
-        for (j = i * 2 + 1; j < m; j = j * 2 + 1) {
+        while ((j = j * 2 + 1) < m) {
             if (j + 1 < m && ins[j] < ins[j + 1]) { // 右子节点存在且大于左子节点，将指针指向右子节点
                 j++;
             }
