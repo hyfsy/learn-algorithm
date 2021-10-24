@@ -14,6 +14,9 @@ import java.util.List;
  * <p>
  * 编码时一般不看这些条件，因为有约定好的调整步骤
  *
+ * see https://tech.meituan.com/2016/12/02/redblack-tree.html
+ * see https://blog.csdn.net/qq_34173549/article/details/79636764
+ *
  * @author baB_hyf
  * @date 2021/10/23
  */
