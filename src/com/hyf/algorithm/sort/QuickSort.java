@@ -95,6 +95,7 @@ public class QuickSort {
 
     // 优化枢轴 - 三数取中
     public static int getPivotV(int[] ins, int l, int h) {
+        // 效果是一样的，等式是等价的
         // int m =  (h + l) / 2;
         int m = l + (h - l) / 2;
 
