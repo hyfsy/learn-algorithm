@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 二叉排序树
  * <p>
- * 代码没进过优化
+ * 代码没经过优化
  *
  * @author baB_hyf
  * @date 2021/10/23

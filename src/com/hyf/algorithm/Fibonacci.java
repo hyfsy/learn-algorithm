@@ -17,6 +17,6 @@ public class Fibonacci {
             return i;
         }
 
-        return fibonacci(i -1) + fibonacci(i - 2);
+        return fibonacci(i - 1) + fibonacci(i - 2);
     }
 }

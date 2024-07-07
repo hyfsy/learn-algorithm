@@ -95,7 +95,7 @@ public class RedBlackTree {
 
         // 初始化根节点
         if (parent == null) {
-            n.red = false; // 根节点黑色
+            n.color(BLACK); // 根节点黑色
             root = n;
         }
         else {
